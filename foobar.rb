@@ -3,11 +3,13 @@ class Foobar
   def self.baz(a)
     # Class method
     # Call with `Foobar.baz`
+
     a.map! {|b| b.to_f}
     a.map! {|c| c + 2}
     a.delete_if {|d| d%2 == 1}
     a.delete_if {|e| e > 10}
     return a.inject(:+)
+
   end
 
   def foo(b)
@@ -30,3 +32,4 @@ end
 # removes any duplicates, 
 # rejects the resulting numbers greater than ten, 
 # and finally returns the sum of the resultingarray.
+
